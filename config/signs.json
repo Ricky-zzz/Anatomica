@@ -1,0 +1,101 @@
+{
+  "version": "1.0.0",
+  "categories": {
+    "color": [
+      {
+        "id": "jaundice",
+        "name": "Jaundice",
+        "description": "Yellowish pigmentation of the skin and sclerae",
+        "regions": ["sclera", "skin", "mucosa"],
+        "laterality_allowed": false,
+        "default_severity": "moderate"
+      },
+      {
+        "id": "pallor",
+        "name": "Pallor",
+        "description": "Unusual lightness of skin color or pale mucous membranes/lips",
+        "regions": ["lips", "skin", "conjunctiva"],
+        "laterality_allowed": false,
+        "default_severity": "moderate"
+      },
+      {
+        "id": "cyanosis",
+        "name": "Cyanosis",
+        "description": "Bluish or purplish discoloration due to low oxygen saturation",
+        "regions": ["lips", "perioral", "skin"],
+        "laterality_allowed": false,
+        "default_severity": "moderate"
+      },
+      {
+        "id": "flushing",
+        "name": "Facial Flushing / Erythema",
+        "description": "Reddening of the face due to fever, vasodilation or heat",
+        "regions": ["cheeks", "forehead", "neck"],
+        "laterality_allowed": false,
+        "default_severity": "moderate"
+      }
+    ],
+    "structural_symmetric": [
+      {
+        "id": "periorbital_edema",
+        "name": "Periorbital Edema",
+        "description": "Swelling or puffiness around both eyes",
+        "regions": ["periorbital", "eyelids"],
+        "laterality_allowed": false,
+        "default_severity": "moderate"
+      },
+      {
+        "id": "diaphoresis",
+        "name": "Diaphoresis / Sweating",
+        "description": "Visible beads of perspiration and sheen on the skin",
+        "regions": ["forehead", "face"],
+        "laterality_allowed": false,
+        "default_severity": "moderate"
+      },
+      {
+        "id": "glassy_eyes",
+        "name": "Glassy Eyes",
+        "description": "Unfocused, moist or glazed ocular appearance typical of fever",
+        "regions": ["eyes"],
+        "laterality_allowed": false,
+        "default_severity": "mild"
+      }
+    ],
+    "structural_asymmetric": [
+      {
+        "id": "ptosis",
+        "name": "Ptosis (Drooping Eyelid)",
+        "description": "Abnormal low-lying upper eyelid on one or both sides (Horner, palsy, myasthenia)",
+        "regions": ["eyelid"],
+        "laterality_allowed": true,
+        "default_severity": "moderate"
+      },
+      {
+        "id": "facial_droop",
+        "name": "Facial Droop / Asymmetry",
+        "description": "Weakness and downward sagging of mouth angle or nasolabial fold (stroke, Bell's palsy)",
+        "regions": ["mouth", "cheek", "nasolabial_fold"],
+        "laterality_allowed": true,
+        "default_severity": "moderate"
+      }
+    ],
+    "secretions": [
+      {
+        "id": "rhinorrhea",
+        "name": "Rhinorrhea / Runny Nose",
+        "description": "Excessive clear or mucoid nasal discharge",
+        "regions": ["nose", "philtrum"],
+        "laterality_allowed": false,
+        "default_severity": "mild"
+      },
+      {
+        "id": "epiphora",
+        "name": "Epiphora / Weepy Eyes",
+        "description": "Overflow of tears onto the face",
+        "regions": ["eyes", "cheeks"],
+        "laterality_allowed": true,
+        "default_severity": "mild"
+      }
+    ]
+  }
+}

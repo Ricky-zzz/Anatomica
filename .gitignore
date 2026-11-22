@@ -1,0 +1,32 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Environment files with secrets
+.env
+
+# Large model assets
+assets/flame/*.pkl
+assets/flame/*.npz
+assets/flame/*.obj
+
+# Keep directories but not generated outputs in Git
+results/arm1/*
+results/arm2/*
+!results/arm1/.gitkeep
+!results/arm2/.gitkeep
+!assets/flame/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
