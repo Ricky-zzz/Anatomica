@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "categories": {
     "color": [
       {
@@ -8,7 +8,8 @@
         "description": "Yellowish pigmentation of the skin and sclerae",
         "regions": ["sclera", "skin", "mucosa"],
         "laterality_allowed": false,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "distinct yellowish scleral icterus in the whites of both eyes with a subtle yellow undertone across the facial skin"
       },
       {
         "id": "pallor",
@@ -16,7 +17,8 @@
         "description": "Unusual lightness of skin color or pale mucous membranes/lips",
         "regions": ["lips", "skin", "conjunctiva"],
         "laterality_allowed": false,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "noticeably pale, washed-out lips and pallid, bloodless facial complexion"
       },
       {
         "id": "cyanosis",
@@ -24,7 +26,8 @@
         "description": "Bluish or purplish discoloration due to low oxygen saturation",
         "regions": ["lips", "perioral", "skin"],
         "laterality_allowed": false,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "distinct bluish-purple central cyanotic discoloration of the lips and perioral region"
       },
       {
         "id": "flushing",
@@ -32,7 +35,8 @@
         "description": "Reddening of the face due to fever, vasodilation or heat",
         "regions": ["cheeks", "forehead", "neck"],
         "laterality_allowed": false,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "visible febrile facial flushing and warm redness across both cheeks and forehead"
       }
     ],
     "structural_symmetric": [
@@ -42,7 +46,8 @@
         "description": "Swelling or puffiness around both eyes",
         "regions": ["periorbital", "eyelids"],
         "laterality_allowed": false,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "symmetrical swelling and puffiness around both upper and lower eyelids (periorbital edema)"
       },
       {
         "id": "diaphoresis",
@@ -50,7 +55,8 @@
         "description": "Visible beads of perspiration and sheen on the skin",
         "regions": ["forehead", "face"],
         "laterality_allowed": false,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "visible glistening sheen and fine beads of sweat across the forehead and temples"
       },
       {
         "id": "glassy_eyes",
@@ -58,7 +64,8 @@
         "description": "Unfocused, moist or glazed ocular appearance typical of fever",
         "regions": ["eyes"],
         "laterality_allowed": false,
-        "default_severity": "mild"
+        "default_severity": "mild",
+        "visual_prompt": "moist, slightly glazed and fatigued appearance of both eyes"
       }
     ],
     "structural_asymmetric": [
@@ -68,7 +75,9 @@
         "description": "Abnormal low-lying upper eyelid on one or both sides (Horner, palsy, myasthenia)",
         "regions": ["eyelid"],
         "laterality_allowed": true,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "abnormal drooping of the upper eyelid partially covering the upper iris and pupil",
+        "unilateral_prompt": "asymmetric drooping of only the patient's {side} upper eyelid partially covering the pupil, while the patient's {opposite} eye remains normally open"
       },
       {
         "id": "facial_droop",
@@ -76,7 +85,9 @@
         "description": "Weakness and downward sagging of mouth angle or nasolabial fold (stroke, Bell's palsy)",
         "regions": ["mouth", "cheek", "nasolabial_fold"],
         "laterality_allowed": true,
-        "default_severity": "moderate"
+        "default_severity": "moderate",
+        "visual_prompt": "downward sagging of the mouth corner and flattened nasolabial fold",
+        "unilateral_prompt": "unilateral downward sagging of only the patient's {side} mouth corner with a flattened {side} nasolabial fold, while the patient's {opposite} side of the face retains normal tone"
       }
     ],
     "secretions": [
@@ -86,7 +97,8 @@
         "description": "Excessive clear or mucoid nasal discharge",
         "regions": ["nose", "philtrum"],
         "laterality_allowed": false,
-        "default_severity": "mild"
+        "default_severity": "mild",
+        "visual_prompt": "clear glistening nasal discharge beneath the nostrils with mild redness around the nasal rim"
       },
       {
         "id": "epiphora",
@@ -94,7 +106,9 @@
         "description": "Overflow of tears onto the face",
         "regions": ["eyes", "cheeks"],
         "laterality_allowed": true,
-        "default_severity": "mild"
+        "default_severity": "mild",
+        "visual_prompt": "excessive watery tearing overflowing at the lower eyelid margins",
+        "unilateral_prompt": "watery tearing overflowing from only the patient's {side} eye onto the {side} cheek, while the {opposite} eye remains dry"
       }
     ]
   }

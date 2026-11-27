@@ -18,12 +18,15 @@ logger = logging.getLogger(__name__)
 class GenerationPipeline:
     """The fixed comparative pipeline: parse -> expand -> render -> verify -> audit."""
 
-    def __init__(self, api_key: Optional[str] = None):
-        self.api_key = api_key or settings.gemini_api_key
-        self.parser = ParserAgent(api_key=self.api_key)
-        self.expander = ExpanderAgent(api_key=self.api_key)
-        self.verifier = VerifierAgent(api_key=self.api_key)
-        self.diffusion_renderer = DiffusionRenderer(api_key=self.api_key)
+    def __init__(self, api_key: Optional[str] = None, offline: bool = False):
+        llm_provider = "offline" if offline else settings.llm_provider
+        vlm_provider = "offline" if offline else settings.vlm_provider
+        image_provider = "offline" if offline else settings.image_provider
+
+        self.parser = ParserAgent(api_key=api_key, provider=llm_provider)
+        self.expander = ExpanderAgent(api_key=api_key, provider=llm_provider)
+        self.verifier = VerifierAgent(api_key=api_key, provider=vlm_provider)
+        self.diffusion_renderer = DiffusionRenderer(provider=image_provider)
         self.parametric_renderer = ParametricRenderer()
 
     def parse_input(self, text: str) -> TraitSchema:

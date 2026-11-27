@@ -90,12 +90,12 @@ def main():
         # Prompt for comparison Arm
         if console:
             console.print("\n[bold yellow]Step 2:[/bold yellow] Select comparative generation arm:")
-            console.print("  [bold cyan][0][/bold cyan] Arm 1 — Diffusion Image (Gemini / Imagen API)")
+            console.print("  [bold cyan][0][/bold cyan] Arm 1 — Diffusion Image (Cloudflare Workers AI: FLUX / SDXL)")
             console.print("  [bold cyan][1][/bold cyan] Arm 2 — Parametric 3D Head Model (FLAME Offscreen Render)")
             choice_str = console.input("[bold green]Select (0 or 1): [/bold green]").strip()
         else:
             print("\nStep 2: Select comparative generation arm:")
-            print("  [0] Arm 1 — Diffusion Image (Gemini / Imagen API)")
+            print("  [0] Arm 1 — Diffusion Image (Cloudflare Workers AI: FLUX / SDXL)")
             print("  [1] Arm 2 — Parametric 3D Head Model (FLAME Offscreen Render)")
             choice_str = input("Select (0 or 1): ").strip()
 
