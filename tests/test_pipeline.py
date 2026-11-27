@@ -1,13 +1,13 @@
 import pytest
 from pathlib import Path
 from src.pipeline.orchestrator import GenerationPipeline
-import config.settings as settings_module
+from config.settings import settings
 
 
 def test_pipeline_offline_execution(tmp_path, monkeypatch):
     # Bug 11 fix: redirect output dirs to tmp_path so tests never pollute results/
-    monkeypatch.setattr(settings_module.settings, "arm1_dir", tmp_path / "arm1")
-    monkeypatch.setattr(settings_module.settings, "arm2_dir", tmp_path / "arm2")
+    monkeypatch.setattr(settings, "arm1_dir", tmp_path / "arm1")
+    monkeypatch.setattr(settings, "arm2_dir", tmp_path / "arm2")
     (tmp_path / "arm1").mkdir()
     (tmp_path / "arm2").mkdir()
 
@@ -31,8 +31,8 @@ def test_pipeline_offline_execution(tmp_path, monkeypatch):
 
 
 def test_expand_disease_does_not_mutate_original(tmp_path, monkeypatch):
-    monkeypatch.setattr(settings_module.settings, "arm1_dir", tmp_path / "arm1")
-    monkeypatch.setattr(settings_module.settings, "arm2_dir", tmp_path / "arm2")
+    monkeypatch.setattr(settings, "arm1_dir", tmp_path / "arm1")
+    monkeypatch.setattr(settings, "arm2_dir", tmp_path / "arm2")
 
     pipeline = GenerationPipeline(api_key=None)
     schema = pipeline.parse_input("adult female with pale lips")
